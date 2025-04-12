@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <style>
+        body {
+            background-image: url('flower.jpg'); /* Use the name of your flower image */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        .popup {
+            position: relative;
+            background-color: white;
+            border: 2px solid #fc2a62;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px; /* Heart size */
+            height: 20px; /* Heart size */
+            background-color: #FFB6C1; /* Baby pink color */
+            border-radius: 50%;
+            transform: rotate(-45deg);
+        }
+
+        .heart:before, .heart:after {
+            content: "";
+            position: absolute;
+            width: 20px; /* Heart size */
+            height: 20px; /* Heart size */
+            background-color: #FFB6C1; /* Baby pink color */
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -10px; /* Positioning for the top left circle */
+            left: 0;
+        }
+
+        .heart:after {
+            left: 10px; /* Positioning for the top right circle */
+            top: 0;
+        }
+
+        .text-container {
+            position: relative;
+            display: inline-block; /* Allow positioning of hearts around text */
+            padding: 20px; /* Space for hearts */
+        }
+
+        .text-container span {
+            font-size: 3em; /* Increased font size for the birthday message */
+            color: #fc2a62; /* Optional: Change text color */
+        }
+
+        .text-container .heart {
+            display: block; /* Display hearts */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="popup">
+            <div class="text-container">
+                <span>HAPPYYY BIRTHDAYY SHAURYAAAA</span>
+                <div class="heart" style="top: -30px; left: -30px;"></div>
+                <div class="heart" style="top: -30px; right: -30px;"></div>
+            </div>
+            <p style="font-size: 1.5em;">III LOVEEE YOUU SOO MUCHYY MUCHH MY BABYY</p> <!-- Increased font size for the paragraph -->
+        </div>
+    </div>
+</body>
+</html>
